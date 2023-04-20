@@ -41,11 +41,13 @@
       <div class="hero position-relative p-3 text-center">
         <div class="hero-text">Hello Sabrina,</div>
         <div class="w-100 input-group"> <input class="form-control" type="number" placeholder="Search..." step="0.1" min="0" id="timevsdistance" type="text"></div>
-        <div class="list" id="featured-list" href="#featured-list">
-          <img
-            src="assets/img/list.jpg"
-            class="w-100 shadow-1-strong mb-4"
-            />
+        <div class="list" id="featured-list">
+            <a target="_self" href="../list.html">
+              <img
+              src="assets/img/list.jpg"
+              class="w-100 shadow-1-strong mb-4"
+              />
+            </a>
           </div>
         <p class="featured-list-title-text">Weekly list</p>
 
@@ -127,17 +129,6 @@
             </div>
        </div>
     <script>
-      $('#featured-list').on('focus click', function(){
-        window.open("../list.html");
-      });
     </script>
   </body>
 </html>
-
-<!-- 
-  Referenced:
-- https://stackoverflow.com/questions/32738169/get-previous-value-of-dropdown-after-onchange-event-jquery
-- https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
-- https://stackoverflow.com/questions/43067555/why-is-this-jquery-error-happening-animate-is-not-a-function
-- https://codepen.io/nxworld/pen/OJVJQme 
--->
