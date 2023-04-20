@@ -1,0 +1,154 @@
+body {
+  background-color: rgba(255, 255, 255, 0.986); /*OLD: rgba(245,245,247,255);*/
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  padding: 0.25rem 1rem;
+  background-color: #f9f9f9;
+  border-top:rgba(0, 0, 0, .1) 1px solid; 
+}
+
+.current-list {
+  margin-top: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.substitute-product {
+  border: 0px !important;
+  color:rgba(210, 210, 210, 0.893);
+  padding: 0% !important;
+  white-space: nowrap;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
+
+
+.collapse-button {
+  margin-left: 6rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.form-check-label {
+  white-space: nowrap;
+}
+
+.form-check {
+  padding-top: 1em;
+  border-bottom: #565656 1px solid;
+  font-size: 4.5vw;
+  font-weight: 300;
+}
+
+.collapse {
+  margin: 0% !important;
+}
+
+.list-savings-card {
+  margin-top: 20em !important;
+  padding-left: 1.5rem !important;
+}
+
+.list-buttons {
+  text-align: center;
+  margin-top: 0em !important;
+  font-size: 3.5vw;
+}
+
+.total-savings-card, .list-savings-card, .list-buttons {
+  margin-top: 1rem;
+}
+
+.total-savings-card, .list-buttons, .hero, .container-fluid {
+  padding-left: 7% !important;
+  padding-right: 7% !important;
+}
+
+.container-fluid {
+  padding-right: 5% !important;
+
+}
+
+.hero-text {
+  white-space: nowrap;
+  margin-top: 1em;
+  margin-right: 8em;
+  color:rgba(0, 0, 0, 0.744);
+  font-size: 7vw;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.input-group {
+  top: 2em;
+}
+
+.header {
+  margin-top: 2em;
+  margin-left: 0em;
+  font-size: 4.5vw;
+  color:rgba(0, 0, 0, 0.744);
+  font-weight: 700;
+  white-space: nowrap;
+
+}
+
+.section {
+  margin-top: 0em !important;
+}
+
+#featured-list {
+  margin-top: 3em !important;
+  bottom: 0em !important;
+  height: 100% !important;
+  width: 100% !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.featured-list-title-text {
+  margin-top: -1.5em;
+  font-size: 4vw;
+  color:rgba(0, 0, 0, 0.744);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.list {
+  bottom: 3em;
+  height: 9em;
+  width: 9em;
+  margin-right: 3%; 
+  margin-left: 3%;
+  margin-bottom: 3em;
+  justify-content: center;
+  border-radius: 30px; 
+  border-color: transparent;
+  box-shadow: 2px 4px 12px rgb(0 0 0 / 8%); 
+  white-space: normal; 
+  overflow: hidden;
+}
+
+img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.list-title-text {
+  text-align: center;
+  margin-top: -2em;
+  font-size: 3vw;
+  color:rgba(0, 0, 0, 0.744);
+  font-weight: 500;
+  white-space: break-spaces;
+}
+
