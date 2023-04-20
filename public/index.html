@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Electric Time</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/index.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  </head>
+
+  <body>
+      <div class="hero position-relative p-3 text-center">
+        <div class="hero-text">Hello Likeable Lions,</div>
+        <p class="subtitle-text">We have some eco-friendly recommendations for you.</p>
+        <div class="w-100 input-group"> <input class="form-control" type="number" placeholder="Search..." step="0.1" min="0" id="timevsdistance" type="text"></div>
+        <div class="row header">
+          <p class="header-text">Just for you</p>
+          <p class="see-all-text">see all</p>
+          </div>
+
+        <div class="product" id="featured-product" href="#featured-product">
+          <img
+            src="assets/img/eggs.jpg"
+            class="w-100 shadow-1-strong mb-4"
+            />
+          </div>
+        <p class="featured-product-title-text">Vital Farms, Egg Large Organic, 18 Count</p>
+        <p class="featured-product-subtitle-text">$11.29</p>
+
+        <div class="row header section">
+          <p class="header-text">Eco-friendly</p>
+          <p class="see-all-text">see all</p>
+        </div> 
+      </div>
+      <div class="container-fluid"> 
+            <div id="content">
+
+                <div class="row justify-content-center">                  
+                      <div class="col-6"> 
+                        <div class="product" id="Burrata" href="#Burrata">
+                              <img
+                              src="assets/img/burrata.jpg"
+                              class="w-100 shadow-1-strong mb-4"
+                              />
+                        </div>
+                        <p class="product-title-text">Vital Farms, Egg Large Organic, 18 Count</p>
+                        <p class="product-subtitle-text">$11.29</p>   
+                      </div>   
+
+                      <div class="col-6"> 
+                        <div class="product" id="Milk" href="#Milk">
+                            <img
+                              src="assets/img/milk.jpg"
+                              class="w-100 shadow-1-strong mb-4"
+                            />
+                        </div>
+                        <p class="product-title-text">Vital Farms, Egg Large Organic, 18 Count</p>
+                        <p class="product-subtitle-text">$11.29</p>                   
+                      </div>
+                </div>
+
+                <div class="row justify-content-center">
+                        <div class="col-6"> 
+                            <div class="product" id="Pesto" href="#Pesto">
+                              <img
+                              src="assets/img/pesto.jpg"
+                              class="w-100 shadow-1-strong mb-4"
+                              />
+                          </div>
+                          <p class="product-title-text">Vital Farms, Egg Large Organic, 18 Count</p>
+                          <p class="product-subtitle-text">$11.29</p>                   
+                        </div>
+
+                      <div class="col-6"> 
+                          <div class="product" id="Bread" href="#Bread">
+                              <img
+                              src="assets/img/bread.jpg"
+                              class="w-100 shadow-1-strong mb-4"
+                              />
+                          </div>
+                          <p class="product-title-text">Vital Farms, Egg Large Organic, 18 Count</p>
+                          <p class="product-subtitle-text">$11.29</p>                   
+                      </div>
+                </div>
+
+                <div class="row justify-content-center">     
+                    <div class="col-6">              
+                        <div class="product" id="Parsley" href="#Parsley">
+                            <img
+                              src="assets/img/parsley.jpg"
+                              class="w-100 shadow-1-strong mb-4"
+                            />
+                        </div>
+                        <p class="product-title-text">Vital Farms, Egg Large Organic, 18 Count</p>
+                        <p class="product-subtitle-text">$11.29</p>                   
+                    </div>
+        
+                    <div class="col-6"> 
+                        <div class="product" id="Salmon" href="#Salmon">
+                            <img
+                              src="assets/img/salmon.jpg"
+                              class="w-100 shadow-1-strong mb-4"
+                            />
+                        </div>  
+                        <p class="product-title-text">Vital Farms, Egg Large Organic, 18 Count</p>
+                        <p class="product-subtitle-text">$11.29</p>                   
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+       </div>
+      <nav class="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/home.png" alt="Home" width="35" height="24" style="margin-right: 3rem;">
+            <img src="assets/img/menu.png" alt="Menu" width="35" height="24" style="margin-right: 3rem;">
+            <img src="assets/img/location.png" alt="Location" width="35" height="24" style="margin-right: 3rem;">
+            <img src="assets/img/user.png" alt="User" width="35" height="24" style="margin-right: 3rem;">
+          </a>
+        </div>
+      </nav>
+    <script>
+      $('#select-transport').on('focus click', function(){
+        if ($(this).val() != "#Select a transportation method") {
+          $(this).data('val', $(this).val());
+        }
+      });
+
+      $('#select-transport').on('change',function() {
+        
+        // Get current and previous cards
+        var dict = {
+          "#Burrata" : "#transport-1",
+          "#Milk" : "#transport-2",
+          "#Pesto" : "#transport-3",
+          "#Parsley" : "#transport-4",
+          "#Salmon" : "#transport-5",
+          "#Bread" : "#transport-11",
+        };
+
+        var currCard = "#" + $(this).val();
+        var prevCard = "#" + $('#select-transport').data('val');
+        if (prevCard != "#Select a transportation method") {
+          $(prevCard).css({"background-color": "white"});
+          $(dict[prevCard]).css({"color": "lightslategray", "opacity": "0.3"});
+        }
+
+        // Indiciate current transportation choice
+        $(currCard).css({"background-color": "#fce994"});
+        $(dict[currCard]).css({"color": "#ffffff", "opacity": "1"});
+
+        // Smooth scroll to current card href on page
+        var $href = $(currCard).attr('href');
+        var $anchor = $($href).offset();
+        var $root = $('html, body');
+        $root.animate({
+            scrollTop: $( $(currCard).attr('href') ).offset().top
+        }, 500);
+      });
+
+      $('#btnClickT2D').on('click',function(){
+        
+        // Convert time to distance (based on speed per transport method)
+        var time = $('#timevsdistance').val().match(/\d+/);
+        var t2d = {
+          1: "Burrata: " + ((time * 3.1)/60).toPrecision(2) + " miles",
+          2: "Milk: " + ((time * 18)/60).toPrecision(2) + " miles",
+          3: "Pesto: " + ((time * 24)/60).toPrecision(2) + " miles",
+          4: "Parsley: " + ((time * 19)/60).toPrecision(2) + " miles",
+          5: "Salmon: " + ((time * 22)/60).toPrecision(2) + " miles",
+          11: "Bread: " + ((time * 20)/60).toPrecision(2) + " miles"
+        }
+          // Display time to distance conversions on page
+          for (let i = 1; i < 12; i++) {
+            $('#transport-'+i).html(t2d[i]);
+          }
+        });
+      
+        $('#btnClickD2T').on('click',function(){
+        var distance = $('#timevsdistance').val().match(/\d+/);
+        var d2t = {
+          1: distance <= 30 ? "Whole Foods: " + parseFloat(((distance / 3.1) * 60).toPrecision(4)) + " minutes" : "Out of range",
+          2: distance <= 7 ? "Milk: " + parseFloat(((distance / 18) * 60).toPrecision(4)) + " minutes" : "Out of range",
+          3: distance <= 31 ? "Trader Joes: " + parseFloat(((distance / 24) * 60).toPrecision(4)) + " minutes" : "Out of range",
+          4: distance <= 18 ? "Berkeley Bowl: " + parseFloat(((distance / 19) * 60).toPrecision(4)) + " minutes" : "Out of range",
+          5: distance <= 10 ? "Andronico's: " + parseFloat(((distance / 22) * 60).toPrecision(4)) + " minutes" : "Out of range",
+          11: distance <= 9 ? "Bread: " + parseFloat(((distance / 9) * 60).toPrecision(4)) + " minutes" : "Out of range",
+        }
+
+        // Display distance to time conversions on page
+        for (let i = 1; i < 12; i++) {
+            $('#transport-'+i).html(d2t[i]);
+          }
+      });
+      
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+
+    </script>
+  </body>
+</html>
+
+<!-- 
+  Referenced:
+- https://stackoverflow.com/questions/32738169/get-previous-value-of-dropdown-after-onchange-event-jquery
+- https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
+- https://stackoverflow.com/questions/43067555/why-is-this-jquery-error-happening-animate-is-not-a-function
+- https://codepen.io/nxworld/pen/OJVJQme 
+-->
