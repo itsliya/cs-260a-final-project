@@ -385,3 +385,10 @@ icon-shape {
   color: rgb(75, 198, 75);
   font-weight: 600;
 }
+
+/* itemList */
+.itemNameInput {
+  /* width: 40%; */
+  margin-left: 20px;
+  border: none;
+}

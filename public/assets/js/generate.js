@@ -29,6 +29,7 @@ function generate(elementList){
             var rawAnswers = output.choices[0].message.content.split(",")
             for (let i = 0; i < elementList.length; i++){
                 elementList[i].textContent = rawAnswers[i].trim().replace(".", "").replace(":", " - ")
+                console.log(elementList[i].textContent)
             }
         })
         .then(() => {
