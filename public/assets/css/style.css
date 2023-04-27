@@ -372,3 +372,16 @@ icon-shape {
 .find-products-item {
   scale: 50% !important;
 }
+
+/* sidebar */
+#mySidebar {
+  border-radius: 20px;
+  width: 50%;
+}
+
+#sidebar-name{
+  text-align: center;
+  background-color:rgb(226, 240, 207);
+  color: rgb(75, 198, 75);
+  font-weight: 600;
+}

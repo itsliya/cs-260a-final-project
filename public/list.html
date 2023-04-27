@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="initial-scale=1, shrink-to-fit=no">
     <title>EcoList</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="assets/css/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>  
@@ -16,14 +17,20 @@
 </head>
 
      <body>
+        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+            <button onclick="sidebar_close()" class="w3-bar-item w3-large" id="sidebar-name">Hello, John!</button>
+            <img src="assets/img/sidebar.png" width="100%"alt="sidebar img">
+        </div>
+
         <nav class="navbar">
             <div class="container">
                 <a class="navbar-brand">
-                    <img src="assets/img/hamburger.png" alt="Home" width="35" height="24" style="margin-right: 3rem;">
-                    Weekly Supply   
+                    <img src="assets/img/hamburger.png" alt="Home" width="35" height="24" style="margin-right: 3rem;" onclick="sidebar_open()">
+                    Weekly Supply
                 </a>
             </div>
         </nav>
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-5 mt-6">
@@ -69,7 +76,9 @@
                     </div>
                 </div>
             </div> 
-            <div class="row h-25" id="featured-product-card">
+
+            <!-- eggs elaborated card -->
+            <!-- <div class="row h-25" id="featured-product-card">
                 <div class="col-12 mt-6">
                     <div class="card featured-product">
                         <div class="card-horizontal">
@@ -95,8 +104,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        <!-- raw list -->
          <div class="col current-list">
+
             <div class="form-check">
                 <div class="row">
                     <div class="col-1">
@@ -125,6 +137,7 @@
                 </div>
                 <div class="item-bottom-border"></div>
             </div>
+
             <div class="form-check">
                 <div class="row">
                     <div class="col-1">
@@ -153,6 +166,7 @@
                 </div>
                 <div class="item-bottom-border"></div>
             </div>
+
             <div class="form-check">
                 <div class="row">
                     <div class="col-1">
@@ -181,6 +195,7 @@
                 </div>
                 <div class="item-bottom-border"></div>
             </div>
+
             <div class="form-check" id="eggs-card" style="display: none;">
                 <div class="row">
                     <div class="col-1">
@@ -212,7 +227,10 @@
             <div class="row end-of-list">
                 <img class="down-arrow" width="30" src="assets/img/down.png">
             </div>    
-        </div>  
+        </div> 
+
+
+        
         <div class="row">
             <div class="col gx-3 list-savings-card">
                 <div class="col-3">
@@ -279,6 +297,14 @@
         $('.input-group').on('click', '.button-minus', function(e) {
             decrementValue(e);
         });
+
+        function sidebar_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+          
+        function sidebar_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
     </script>
     </body>
 </html>
