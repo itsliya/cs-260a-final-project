@@ -6,6 +6,7 @@
     <title>EcoList</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="assets/css/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>  
@@ -26,7 +27,7 @@
                 <div class="row">
                     <div class="col-6">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">Eggs - Pete & Garry's</label>
+                        <label class="form-check-label" for="flexCheckDefault">Apples</label>
                     </div>
                     <div class="col-6">
                         <button class="btn btn-success btn-circle collapse-button" type="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="subsituteCollapse1">i</button>
@@ -37,7 +38,7 @@
                 <div class="row">
                     <div class="col">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked">Milk - Borden Dairy</label>
+                        <label class="form-check-label" for="flexCheckChecked">Milk</label>
                     </div>
                     <div class="col">
                         <button class="btn btn-success btn-circle collapse-button" type="button" data-toggle="collapse" data-target=".multi-collapse-2" aria-expanded="false" aria-controls="subsituteCollapse2">i</button>
@@ -65,7 +66,7 @@
             </div>    
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked"> </label>
+                <label class="form-check-label" for="flexCheckChecked">Butter</label>
             </div>    
         </div>  
 
@@ -89,7 +90,7 @@
          </div>          
         <div class="row gx-3 list-buttons">
             <div class="col-6">
-                <a class="generate-button">
+                <a class="generate-button" id="generate-button">
                     <img src="assets/img/generate.png" alt="Home" width="30" height="24" style="margin-right: 0rem;">
                 </a>
                 <p class="list-button-text">Generate</p>
@@ -101,6 +102,8 @@
                 <p class="list-button-text">Share</p>
             </div>
         </div>
+    
+    <script type="module" src="assets/js/generate.js"></script>
     </body>
 </html>
       
