@@ -7,10 +7,15 @@ body {
   padding: 0.25rem 1rem;
   background-color: #f9f9f9;
   border-top:rgba(0, 0, 0, .1) 1px solid; 
+  color: rgb(75, 198, 75);
+  font-weight: 600;
+}
+
+.navbar-brand img {
+  filter: invert(55%) sepia(96%) saturate(320%) hue-rotate(71deg) brightness(98%) contrast(94%);
 }
 
 .current-list {
-  margin-top: 3rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -40,43 +45,70 @@ body {
 
 .form-check-label {
   white-space: nowrap;
+  font-size: 15px;
+  padding-top: 0.5em !important;
 }
+
+.form-check-input[type="checkbox"] {
+  width: 15px;
+  height: 35px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #b0f6a6;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.form-check-input[type="checkbox"]:checked {
+  background-color: #b0f6a6;
+}
+
+.form-check-input[type="checkbox"]:focus {
+  box-shadow: none;
+}
+
+
+/* .form-check-input {
+  height: 20px;
+  position: absolute;
+  background-color:rgb(75, 198, 75);
+} */
+
 
 .form-check {
   padding-top: 1em;
-  border-bottom: #565656 1px solid;
   font-size: 4.5vw;
   font-weight: 300;
+}
+
+.form-check .row {
+  background-color: #f5fff53a;
+}
+
+.item-bottom-border {
+  border-bottom: #e1ffdd 2px groove;
+  filter: drop-shadow(3px 1px 4px #a5d499);
+  margin-right: 0.5em;
+}
+
+.end-of-list {
+  border-top: #e1ffdd 2px groove;
+  margin-top: 1em;
+  justify-content: center;
+  align-items: center;
+  scale: 92%;
+}
+.down-arrow {
+  filter: invert(55%) sepia(96%) saturate(320%) hue-rotate(71deg) brightness(98%) contrast(94%);
+  border-bottom: 0px !important;
 }
 
 .collapse {
   margin: 0% !important;
 }
 
-.list-savings-card {
-  margin-top: 20em !important;
-  padding-left: 1.5rem !important;
-}
-
-.list-buttons {
-  text-align: center;
-  margin-top: 0em !important;
-  font-size: 3.5vw;
-}
-
-.total-savings-card, .list-savings-card, .list-buttons {
-  margin-top: 1rem;
-}
-
-.total-savings-card, .list-buttons, .hero, .container-fluid {
-  padding-left: 7% !important;
-  padding-right: 7% !important;
-}
-
-.container-fluid {
-  padding-right: 5% !important;
-
-}
 
 .hero-text {
   white-space: nowrap;
@@ -88,7 +120,7 @@ body {
   line-height: 1em;
 }
 
-.input-group {
+.search {
   top: 2em;
 }
 
@@ -138,7 +170,7 @@ body {
   overflow: hidden;
 }
 
-img {
+.navbar-brand img, .btn img, .list-savings-card img, .end-of-list img {
   height: 100%;
   object-fit: contain;
 }
@@ -152,3 +184,191 @@ img {
   white-space: break-spaces;
 }
 
+.store-logo-img {
+  margin-left: 3rem;
+  scale: 155%;
+}
+
+.carbon-price-img {
+  margin-left: 3.5rem;
+  scale: 210%;
+}
+
+icon-shape {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.item-counter {
+  scale: 60%;
+  top: 0em;
+  margin-left: -15rem;
+  right: -17rem;
+}
+
+.icon-sm {
+  width: 2rem;
+  margin: 0% !important;
+  height: 2rem;
+  background: #e3ffe3;
+}
+
+.button-minus, .button-plus {
+  color: green;
+  border: 0px solid !important;
+}
+
+.quantity-field {
+  width: 10% !important;
+}
+
+.list-savings-card {
+  margin-top: 13em !important;
+  padding-left: 1.5rem !important;
+}
+
+.co2-card, .receipt-card {
+  border:rgb(75, 198, 75) 2px solid;
+  border-radius: 7%;
+  padding: 5%;
+  margin-bottom: 8px;
+  box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+}
+
+.receipt-card img {
+  filter: invert(55%) sepia(96%) saturate(320%) hue-rotate(71deg) brightness(98%) contrast(94%);
+}
+
+.generate-card {
+  justify-content: center;
+  align-items: center;
+  margin-left: 17em !important;
+  bottom: 5.5em !important;
+  position: relative !important;
+}
+.generate-card img {
+  margin-left: 0.5em !important;
+  filter: invert(55%) sepia(96%) saturate(320%) hue-rotate(71deg) brightness(208%) contrast(74%);
+}
+
+.featured-stores {
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  height: 50px !important;
+  box-shadow: 2px 4px 12px rgba(124, 213, 119, 0.285); 
+  width: 135px;
+}
+
+.featured-profiles {
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: -1em;
+  height: 50px !important;
+  box-shadow: 2px 4px 12px rgba(124, 213, 119, 0.285); 
+  width: 80px;
+}
+
+.featured-save {
+  justify-content: center;
+  align-items: center;
+  margin-left: -4.5rem;
+  margin-top: 2rem;
+  height: 50px !important;
+  box-shadow: 2px 4px 12px rgba(124, 213, 119, 0.285); 
+  width: 50px;
+}
+
+.featured-add {
+  justify-content: center;
+  align-items: center;
+  margin-left: -3rem;
+  margin-top: 2rem;
+  height: 50px !important;
+  box-shadow: 2px 4px 12px rgba(124, 213, 119, 0.285); 
+  width: 50px;
+}
+
+
+.featured-stores .img-square-wrapper {
+  margin-left: 22% !important;
+}
+
+.featured-stores .img-square-wrapper img {
+  float: left;
+  margin-left: -44% !important;
+}
+
+
+.featured-profiles .img-square-wrapper {
+  margin-left: 45% !important;
+}
+
+.featured-profiles .img-square-wrapper img {
+  float: left;
+  margin-left: -60% !important;
+}
+
+.featured-save .img-square-wrapper img, .featured-add .img-square-wrapper img {
+  margin-bottom: -25% !important;
+  margin-left: -10% !important;
+  filter: invert(55%) sepia(96%) saturate(320%) hue-rotate(71deg) brightness(98%) contrast(94%);
+}
+
+.featured-save .img-square-wrapper p, .featured-add .img-square-wrapper p  {
+  margin-bottom: 18% !important;
+  margin-left: 21% !important;
+  font-size: 10px;
+  color:rgb(75, 198, 75);
+}
+
+.featured-save .img-square-wrapper, .featured-add .img-square-wrapper {
+  margin-left: 10% !important;
+}
+
+.featured-product {
+  margin-top: 2rem;
+  height: 100px !important;
+  box-shadow: 2px 4px 12px rgba(124, 213, 119, 0.285); 
+}
+
+.card-horizontal {
+  display: flex;
+}
+
+.featured-product-title-text {
+  position: relative;
+  top: -0.8rem;
+  font-size: 4vw;
+  color:rgba(0, 0, 0, 0.744);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.featured-store-logo-img {
+  margin-left: -0.5rem;
+  margin-top: -1.5rem !important;
+  width: 25% !important;
+}
+
+.featured-product-logos {
+  margin-left: 3.5rem;
+  margin-top: -1.7rem !important;
+  width: 25% !important;
+  scale: 250%;
+}
+
+.featured-product-counter {
+  scale: 60%;
+  top: -1.7em;
+  margin-left: -16.5rem;
+  right: -15rem;
+}
+
+.find-products-item {
+  scale: 50% !important;
+}

@@ -31,11 +31,16 @@ function generate(elementList){
                 elementList[i].textContent = rawAnswers[i].trim().replace(".", "").replace(":", " - ")
             }
         })
+        .then(() => {
+                document.getElementById("co2").innerHTML = "Total CO2: 1.6 kg"
+                document.getElementById("price").innerHTML = "Total Price: $341.56"   
+            }     
+        )
         .catch(error => console.log(error));
 }
 
 function generateButtonHandler(){
-    var elementList = document.getElementsByClassName("form-check-label")
+    var elementList = document.getElementsByClassName("form-check-label");
     generate(elementList)
 }
 
