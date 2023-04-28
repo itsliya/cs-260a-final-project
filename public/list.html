@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/checkbox.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>  
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -37,7 +38,7 @@
                     <div class="card featured-stores border-0">
                         <div class="card-horizontal">
                             <div class="img-square-wrapper">
-                                <img src="assets/img/safeway_logo.png" style="scale: 75%; margin-top: 10px !important; " width="80px" height="50px" alt="Card image cap">
+                                <img src="assets/img/safeway_logo.png" style="scale: 55%;" width="70px" height="70px" alt="Card image cap">
                                 <img src="assets/img/whole_foods_logo.png" style="scale: 55%;" width="70px" height="70px" alt="Card image cap">
                                 <img src="assets/img/trader_joes_logo.png" style="scale: 55%;" width="70px" height="70px" alt="Card image cap">
                                 <img src="assets/img/berkeley_bowl_logo.png" style="scale: 55%;" width="70px" height="70px" alt="Card image cap">
@@ -77,132 +78,39 @@
                 </div>
             </div> 
 
-            <!-- eggs elaborated card -->
-            <!-- <div class="row h-25" id="featured-product-card">
-                <div class="col-12 mt-6">
-                    <div class="card featured-product">
-                        <div class="card-horizontal">
-                            <div class="img-square-wrapper">
-                                <img src="assets/img/eggs.jpg" style="scale: 68%; margin-top: -20px !important;" width="150px" height="140px" alt="Card image cap">
-                            </div>
-                            <div class="card-body">
-                                <input class="featured-product-title-text border-0" type="form-check-input" type="text" placeholder="Type your item name">
-                                <img class="featured-store-logo-img" src="./assets/img/safeway_logo.png"/>
-                                <img class="featured-product-logos" src="./assets/img/featured-product-logos.png"/>
-                                <div class="col-1">
-                                    <div class="row">
-                                        <button type="button" id="find-products-button" class="btn btn-sm btn-outline-success py-0" style="font-size: 0.7em; margin-top: 3px !important; white-space: nowrap; z-index: 10;">Find products</button>
-                                        <div class="featured-product-counter input-group w-auto justify-content-end align-items-center">
-                                            <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
-                                            <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center">
-                                            <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
-                                        </div>
-                                    </div>
-                                </div>            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <!-- raw list -->
         <div class="col current-list">
 
             <div id="listContainer"></div>
 
-            <!-- <div class="form-check">
-                <div class="row">
-                    <div class="col-1">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">Apples</label>
-                    </div>
-                    <div class="col-1">
-                        <button class="btn btn-circle collapse-button" type="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="subsituteCollapse1">
-                            <img class="store-logo-img" src="./assets/img/safeway_logo.png"/>
-                        </button>
-                    </div>
-                    <div class="col-1">
-                        <button class="btn btn-circle collapse-button" type="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="subsituteCollapse1">
-                            <img class="carbon-price-img" src="./assets/img/carbon_price.png"/>
-                        </button>
-                    </div>
-                    <div class="col-1">
-                        <div class="row">
-                            <div class="item-counter input-group w-auto justify-content-end align-items-center">
-                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
-                                <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center">
-                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
+            <!-- eggs elaborated card -->
+            <!-- <div>
+                <div class="product-card">
+                    <span>
+                        <img class="product-card-img" src="assets/img/eggs.jpg" width="100px" height="100px" alt="Card image cap">
+                    </span>
+                    <span class="product-card-content">
+                        <div class="product-card-title form-check-label">Egg - Pete&Garry's</div>
+                        <div class="product-card-info">
+                            <img src="./assets/img/safeway_logo.png" width="30px" height="30px"/>
+                            <img style="margin-left: 10px" src="./assets/img/featured-product-logos.png" height="20px"/>
+                        </div>
+                        <div class="product-card-quant">
+                            <div style="width: 100px; margin-left: 85px">
+                                <input type="button" value="-" id="egg-minus" onclick="minusItem(this)" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
+                                <input type="number" style="width: 20px" step="1" max="10" value="1" name="quantity" class="border-0 text-center">
+                                <input type="button" value="+" id="egg-minus" onclick="plusItem(this)" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
                             </div>
                         </div>
-                    </div>
+                    </span>
                 </div>
-                <div class="item-bottom-border"></div>
-            </div>
-
-            <div class="form-check">
-                <div class="row">
-                    <div class="col-1">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">Milk</label>
-                    </div>
-                    <div class="col-1">
-                        <button class="btn btn-circle collapse-button" type="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="subsituteCollapse1">
-                            <img class="store-logo-img" src="./assets/img/safeway_logo.png"/>
-                        </button>
-                    </div>
-                    <div class="col-1">
-                        <button class="btn btn-circle collapse-button" type="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="subsituteCollapse1">
-                            <img class="carbon-price-img" src="./assets/img/carbon_price.png"/>
-                        </button>
-                    </div>
-                    <div class="col-1">
-                        <div class="row">
-                            <div class="item-counter input-group w-auto justify-content-end align-items-center">
-                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
-                                <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center">
-                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-                <div class="item-bottom-border"></div>
-            </div>
-
-            <div class="form-check">
-                <div class="row">
-                    <div class="col-1">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">Butter</label>
-                    </div>
-                    <div class="col-1">
-                        <button class="btn btn-circle collapse-button" type="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="subsituteCollapse1">
-                            <img class="store-logo-img" src="./assets/img/safeway_logo.png"/>
-                        </button>
-                    </div>
-                    <div class="col-1">
-                        <button class="btn btn-circle collapse-button" type="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="subsituteCollapse1">
-                            <img class="carbon-price-img" src="./assets/img/carbon_price.png"/>
-                        </button>
-                    </div>
-                    <div class="col-1">
-                        <div class="row">
-                            <div class="item-counter input-group w-auto justify-content-end align-items-center">
-                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
-                                <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center">
-                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-bottom-border"></div>
             </div> -->
 
             <!-- <div class="row end-of-list">
                 <img class="down-arrow" width="30" src="assets/img/down.png">
             </div>  -->
 
-            <div class="form-check" id="eggs-card">
+            <div class="form-check" id="eggs-card" style="margin-bottom: 15px;">
                 <div class="row">
                     <div class="col-1">
                         <img src="assets/img/plus_green.png" width="30px" height="30px" onclick="addListItem()" class="form-check-input">
@@ -214,17 +122,16 @@
         </div>
 
 
-
-        <div class="row">
-            <div class="col gx-3 list-savings-card">
+        <div class="row" id="footerInfo">
+            <div class="col list-savings-card">
                 <div class="col-3">
-                    <div class="co2-card" style="width: 12rem;">
+                    <div class="co2-card" style="width: 15rem;">
                         <img width="30" src="assets/img/co2.png">
                         <p id="co2" style="display: inline;">Total CO2: 0 kg</p>
                     </div>            
                 </div>
                 <div class="col-3">
-                    <div class="receipt-card" style="width: 12rem;">
+                    <div class="receipt-card" style="width: 15rem;">
                         <img width="30" src="assets/img/receipt.png">
                         <p id="price" style="display: inline;">Total Price: $0</p>
                     </div>
@@ -242,15 +149,16 @@
     <!-- Control scripts -->
     <script type="module" src="assets/js/generate.js"></script>
     <script>
-        const generateButton = document.getElementById("find-products-button");
-        const featuredProductCard = document.getElementById("featured-product-card");
-        const eggsCard = document.getElementById("eggs-card");
-        generateButton.addEventListener("click",  function(e) {
-            featuredProductCard.style.display = "none";
-            eggsCard.style.display = "block";
-        });
+        
+    const generateButton = document.getElementById("find-products-button");
+    const featuredProductCard = document.getElementById("featured-product-card");
+    const eggsCard = document.getElementById("eggs-card");
+    generateButton.addEventListener("click",  function(e) {
+        featuredProductCard.style.display = "none";
+        eggsCard.style.display = "block";
+    });
 
-        function incrementValue(e) {
+    function incrementValue(e) {
         e.preventDefault();
         var fieldName = $(e.target).data('field');
         var parent = $(e.target).closest('div');
@@ -296,34 +204,30 @@
     // Create Raw List
     function addListItem() {
         var container = document.getElementById("listContainer")
-        var name = document.getElementById("itemNameInput").value;
+        var name = document.getElementById("itemNameInput").value.replace(" ", "_");
         if (document.getElementById("itemNameInput").value === ""){
             return
         }
         document.getElementById("itemNameInput").value = "";
         var newItem = document.createElement("div")
+        newItem.id = name+"-item"
+        newItem.className = "item"
         newItem.innerHTML = `<div class="form-check"> \
             <div class="row"> \
                 <div class="col-1"> \
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> \
-                    <label class="form-check-label" for="flexCheckDefault">${name}</label> \
+                    <label class="form-check-label" style="margin-left: 10px" id="${name}-label" for="flexCheckDefault">${name}</label> \
                 </div> \
                 <div class="col-1"> \
-                    <button class="btn btn-circle collapse-button" type="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="subsituteCollapse1"> \
-                        <img class="store-logo-img" src="./assets/img/safeway_logo.png"/> \
-                    </button> \
                 </div> \
                 <div class="col-1"> \
-                    <button class="btn btn-circle collapse-button" type="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="subsituteCollapse1"> \
-                        <img class="carbon-price-img" src="./assets/img/carbon_price.png"/> \
-                    </button> \
                 </div> \
                 <div class="col-1"> \
                     <div class="row"> \
                         <div class="item-counter input-group w-auto justify-content-end align-items-center"> \
-                            <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity"> \
-                            <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center"> \
-                            <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity"> \
+                            <input type="button" id="${name}-minus" onclick="minusItem(this)" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity"> \
+                            <input type="number" id="${name}-quantity" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center"> \
+                            <input type="button" id="${name}-plus" onclick="plusItem(this)" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity"> \
                         </div> \
                     </div> \
                 </div> \
@@ -331,6 +235,25 @@
             <div class="item-bottom-border"></div> \
         </div>`
         container.appendChild(newItem)
+    }
+
+    function minusItem(element){
+        var name = element.id.split("-")[0].trim()
+        console.log(name)
+        var quantity = parseInt(document.getElementById(name+"-quantity").value)
+        if(quantity>1){
+            document.getElementById(name+"-quantity").value = quantity-1
+        }else{
+            container = document.getElementById("listContainer")
+            child = document.querySelector(`#listContainer #${name}-item`)
+            container.removeChild(child)
+        }
+    }
+
+    function plusItem(element){
+        var name = element.id.split("-")[0].trim()
+        var quantity = parseInt(document.getElementById(name+"-quantity").value)
+        document.getElementById(name+"-quantity").value = quantity+1
     }
     </script>
     </body>
