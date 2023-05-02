@@ -252,9 +252,10 @@ icon-shape {
   bottom: 5.5em !important;
   position: relative !important;
 }
+
 .generate-card img {
   margin-left: 0.5em !important;
-  filter: invert(55%) sepia(96%) saturate(320%) hue-rotate(71deg) brightness(208%) contrast(74%);
+  /* filter: invert(55%) sepia(96%) saturate(320%) hue-rotate(71deg) brightness(208%) contrast(74%); */
 }
 
 .featured-stores {
