@@ -16,16 +16,9 @@
         height: 80px;
         margin-bottom: 20px;
         padding: 10px;
+        background-color: #f8f9fa;
         border-radius: 5px;
         transition: background-color 0.3s;
-      }
-
-      .list-row:nth-of-type(odd) {
-        background-color: #f8f9fa;
-      }
-
-      .list-row:nth-of-type(even) {
-        background-color: #e2e3e5;
       }
 
       .list-row:hover {
@@ -50,19 +43,18 @@
       }
 
       .list-description {
-        margin: 0;
-        font-size: 14px;
-        color: #6c757d;
-      }
+      margin: 0;
+      font-size: 11px;
+      color: #6c757d;
+      max-height: 60px;
+      overflow-y: auto;
+}
+
 
       .list-date {
         margin-left: 15px;
         font-size: 14px;
         color: #6c757d;
-      }
-
-      a.list-row {
-        text-decoration: none;
       }
     </style>
   </head>
@@ -101,48 +93,58 @@
       </div>
       
       
-
       <div class="row">
         <div class="col-12">
+          <div class="list-row">
+            <div class="list-image-placeholder"></div>
+            <div class="list-content">
+              <p class="list-title">New List</p>
+              <p class="list-description">Grocery list for the week.</p>
+            </div>
+            <div class="list-date">01/15/2023</div>
+          </div>
           <a href="WeeklyGroceries.html">
             <div class="list-row">
               <div class="list-image-placeholder"></div>
               <div class="list-content">
                 <p class="list-title">Weekly Groceries</p>
-                <p class="list-description">Description of List 1</p>
+                <p class="list-description">Standard grocery list.</p>
               </div>
               <div class="list-date">01/01/2023</div>
             </div>
-        </a>
-        <a href="kidslist.html">
-          <div class="list-row">
-            <div class="list-image-placeholder"></div>
-            <div class="list-content">
-              <p class="list-title">Kid's Sports Snacks</p>
-              <p class="list-description">Description of List 2</p>
+          </a>
+          <a href="kidslist.html">
+            <div class="list-row">
+              <div class="list-image-placeholder"></div>
+              <div class="list-content">
+                <p class="list-title">Kid's Sports Snacks</p>
+                <p class="list-description">Healthy snacks for kids' sports.</p>
+              </div>
+              <div class="list-date">01/15/2023</div>
             </div>
-            <div class="list-date">01/15/2023</div>
-          </div>
-        </a>
-        <a href="Grilling.html">
-          <div class="list-row">
-            <div class="list-image-placeholder"></div>
-            <div class="list-content">
-              <p class="list-title">Jack's Grilling</p>
-              <p class="list-description">Description of List 3</p>
+          </a>
+          <a href="Grilling.html">
+            <div class="list-row">
+              <div class="list-image-placeholder"></div>
+              <div class="list-content">
+                <p class="list-title">Jack's Grilling</p>
+                <p class="list-description">Items needed for a barbecue with friends.</p>
+              </div>
+              <div class="list-date">02/01/2023</div>
             </div>
-            <div class="list-date">02/01/2023</div>
-          </div>
-        </a>
+          </a>
           <div class="list-row">
             <div class="list-image-placeholder"></div>
             <div class="list-content">
               <p class="list-title">Old Shopping List</p>
-              <p class="list-description">Description of List 4</p>
+              <p class="list-description">Items already purchased.</p>
             </div>
             <div class="list-date">02/15/2023</div>
           </div>
         </div>
+      </div>
+      
+        
       </div>
     </div>
   </body>
