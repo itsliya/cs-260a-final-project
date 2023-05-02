@@ -143,7 +143,7 @@ function changeComponent(elementList, rawAnswers){
     document.getElementById("quantityCounter").value = unitCount
 }
 
-function generateButtonHandler(){
+export function generateButtonHandler(){
     if(!generating){
         var elementList = [].concat([].slice.call(document.getElementsByClassName("generated-item")),
                           [].slice.call(document.getElementsByClassName("item")))

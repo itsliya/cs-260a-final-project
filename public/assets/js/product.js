@@ -52,5 +52,7 @@ export const productImg = {
     "croissant":"https://upload.wikimedia.org/wikipedia/commons/2/28/2018_01_Croissant_IMG_0685.JPG",
     "cookie":"https://cdnimg.webstaurantstore.com/images/products/large/556994/2076308.jpg",
     "paper":"https://si.vwr.com/stibo/low_res/std.lang.all/26/81/22662681.jpg",
-    "knife":"https://www.ikea.com/us/en/images/products/vardagen-chefs-knife-dark-gray__0710384_pe727512_s5.jpg?f=xl"
+    "lamb":"https://cdn.shopify.com/s/files/1/0445/1365/6985/files/lamb-meat-cuts-guide-loin-850x600.jpg?v=1638487747",
+    "knife":"https://www.ikea.com/us/en/images/products/vardagen-chefs-knife-dark-gray__0710384_pe727512_s5.jpg?f=xl",
+    "charcoal": "https://grandroyalcoco.com/wp-content/uploads/2022/01/Hardwood-Lump-Charcoal-1.jpg"
 }
