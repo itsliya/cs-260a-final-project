@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/checkbox.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>  
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -17,13 +18,11 @@
 </head>
 
      <body>
-        <!-- side bar -->
-        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none; z-index:200" id="mySidebar">
+        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
             <button onclick="sidebar_close()" class="w3-bar-item w3-large" id="sidebar-name">Hello, John!</button>
             <img src="assets/img/sidebar.png" width="100%"alt="sidebar img">
         </div>
 
-        <!-- top nav bar -->
         <nav class="navbar">
             <div class="container">
                 <a class="navbar-brand">
@@ -60,24 +59,13 @@
                 <div class="col-1 mt-6">
                     <div class="card featured-save border-0">
                         <div class="card-horizontal">
-                            <div class="img-square-wrapper" onclick="window.location.href='new-list.html'">
+                            <div class="img-square-wrapper" onclick="window.location.href='index.html'">
                                 <img src="assets/img/arrow-circle.png" style="scale: 48%;" width="70px" height="62px" alt="Card image cap">
                                 <p>Home</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-1 mt-6">
-                    <button class="card featured-save border-0" onclick="window.location.href='index.html'">
-                      <div class="card-horizontal">
-                        <div class="img-square-wrapper">
-                          <img src="assets/img/arrow-circle.png" style="scale: 48%;" width="70px" height="62px" alt="Card image cap">
-                          <p>Save</p>
-                        </div>
-                      </div>
-                    </button>
-                  </div>
-                   -->
                 <div class="col-1 mt-6">
                     <div class="card featured-add border-0">
                         <div class="card-horizontal">
@@ -90,20 +78,19 @@
                 </div>
             </div> 
 
-        <!-- item list -->
+        <!-- raw list -->
         <div class="col current-list">
 
-            <!-- contain all the list items (products) -->
             <div id="listContainer"></div>
 
             <!-- eggs elaborated card -->
-            <!-- <div>
+            <div>
                 <div class="product-card">
                     <span>
                         <img class="product-card-img" src="assets/img/eggs.jpg" width="100px" height="100px" alt="Card image cap">
                     </span>
                     <span class="product-card-content">
-                        <div class="product-card-title form-check-label">Egg - Pete&Garry's</div>
+                        <div class="product-card-title form-check-label">Gatorade</div>
                         <div class="product-card-info">
                             <img src="./assets/img/safeway_logo.png" width="30px" height="30px"/>
                             <img style="margin-left: 10px" src="./assets/img/featured-product-logos.png" height="20px"/>
@@ -117,7 +104,50 @@
                         </div>
                     </span>
                 </div>
-            </div> -->
+            </div>
+            <div>
+                <div class="product-card">
+                    <span>
+                        <img class="product-card-img" src="assets/img/eggs.jpg" width="100px" height="100px" alt="Card image cap">
+                    </span>
+                    <span class="product-card-content">
+                        <div class="product-card-title form-check-label">Biscuits</div>
+                        <div class="product-card-info">
+                            <img src="./assets/img/safeway_logo.png" width="30px" height="30px"/>
+                            <img style="margin-left: 10px" src="./assets/img/featured-product-logos.png" height="20px"/>
+                        </div>
+                        <div class="product-card-quant">
+                            <div style="width: 100px; margin-left: 85px">
+                                <input type="button" value="-" id="egg-minus" onclick="minusItem(this)" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
+                                <input type="number" style="width: 20px" step="1" max="10" value="1" name="quantity" class="border-0 text-center">
+                                <input type="button" value="+" id="egg-minus" onclick="plusItem(this)" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div>
+                <div class="product-card">
+                    <span>
+                        <img class="product-card-img" src="assets/img/eggs.jpg" width="100px" height="100px" alt="Card image cap">
+                    </span>
+                    <span class="product-card-content">
+                        <div class="product-card-title form-check-label">Gogurt</div>
+                        <div class="product-card-info">
+                            <img src="./assets/img/safeway_logo.png" width="30px" height="30px"/>
+                            <img style="margin-left: 10px" src="./assets/img/featured-product-logos.png" height="20px"/>
+                        </div>
+                        <div class="product-card-quant">
+                            <div style="width: 100px; margin-left: 85px">
+                                <input type="button" value="-" id="egg-minus" onclick="minusItem(this)" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
+                                <input type="number" style="width: 20px" step="1" max="10" value="1" name="quantity" class="border-0 text-center">
+                                <input type="button" value="+" id="egg-minus" onclick="plusItem(this)" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+
 
             <div class="form-check" id="eggs-card" style="margin-bottom: 15px;">
                 <div class="row">
@@ -211,6 +241,7 @@
 
     function minusItem(element){
         var name = element.id.split("-")[0].trim()
+        console.log(name)
         var quantity = parseInt(document.getElementById(name+"-quantity").value)
 
         var item = document.getElementById(name+"-item")
@@ -248,6 +279,7 @@
     </script>
     </body>
 </html>
+      
 <!-- References: 
 - https://codepen.io/anitaparmar26/pen/BaLYMeN 
 - https://codepen.io/SteveJRobertson/pen/POdvgz
