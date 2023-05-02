@@ -235,8 +235,8 @@ icon-shape {
 
 .co2-card, .receipt-card {
   border:rgb(75, 198, 75) 2px solid;
-  border-radius: 7%;
-  padding: 5%;
+  border-radius: 10px;
+  padding: 10%;
   margin-bottom: 8px;
   box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
 }
@@ -415,7 +415,7 @@ icon-shape {
 
 .product-card-img {
   margin: 10px;
-  background-color: #b0f6a6;
+  background-color: white;
   border: 3px solid rgb(248, 251, 243);
   border-radius: 10px;
 }
