@@ -68,6 +68,22 @@ function generate(elementList){
         });
 }
 
+function checkAnswer(answer, name, shop){
+    const initLen = (name+" - ").length;
+    if(answer.toLowerCase().startsWith(`${name.toLowerCase()} -`)){
+        return answer;
+    }
+    if(answer.length-initLen>20){
+        return name + " - " + shop;
+    }else if(answer.length-initLen<5 || answer.replace("-", " ").split(" ").length===1){
+        return name + " - " + answer;
+    }else if(answer.toLowerCase().startsWith("one") || answer.toLowerCase().startsWith("and")){
+        return name + " - " + shop;
+    }else{
+        return answer;
+    }
+}
+
 function changeComponent(elementList, rawAnswers){
     var unitCount = 0;
     for (let i = 0; i < elementList.length; i++){
@@ -81,9 +97,7 @@ function changeComponent(elementList, rawAnswers){
         var answer = eleName
         try {
             answer = rawAnswers[i].trim().replace(".", "").replace(":", " - ").replace(",", "")
-            if(answer.length > 40){
-                answer = eleName + " - " + shopName
-            }
+            answer = checkAnswer(answer, eleName, shopName)
         } catch(e) {
             answer = eleName + " - " + shopName
         }
@@ -131,8 +145,8 @@ function changeComponent(elementList, rawAnswers){
 
 function generateButtonHandler(){
     if(!generating){
-        var elementList = [].concat([].slice.call(document.getElementsByClassName("item")),
-                          [].slice.call(document.getElementsByClassName("generated-item")))
+        var elementList = [].concat([].slice.call(document.getElementsByClassName("generated-item")),
+                          [].slice.call(document.getElementsByClassName("item")))
         generate(elementList)
     }else{
         console.log("Generating in process!")

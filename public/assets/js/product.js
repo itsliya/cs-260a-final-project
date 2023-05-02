@@ -6,7 +6,7 @@ export const productImg = {
     "butter": "assets/img/productImg/butter-LandofLakes.png",
     "cake": "assets/img/productImg/cheesecake_TheCheesecakeFactory.png",
     "chicken": "assets/img/productImg/chickenbreast-Perdue.png",
-    "chips": "assets/img/productImg/chips_lay's.png",
+    "chip": "assets/img/productImg/chips_lay's.png",
     "chocolate": "assets/img/productImg/Chocolate-Hershey's.png",
     "cream": "assets/img/productImg/cream_HorizonOrganic.png",
     "milk": "assets/img/productImg/Oatmilk_oatly.png",
