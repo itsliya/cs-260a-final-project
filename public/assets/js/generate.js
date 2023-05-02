@@ -7,6 +7,8 @@ const indexList = [0, 1, 2, 3]
 const shopList = ["Safeway", "Wholefoods", "Traderjoes", "BerkeleyBowl"]
 const shopImgList = ["./assets/img/safeway_logo.png", "./assets/img/whole_foods_logo.png", "./assets/img/trader_joes_logo.png", "./assets/img/berkeley_bowl_logo.png"]
 
+var generating = false
+
 const sampleSize = ([...arr], n = 1) => {
     let m = arr.length;
     while (m) {
@@ -18,6 +20,16 @@ const sampleSize = ([...arr], n = 1) => {
 
 function generate(elementList){
     console.log("pressed generate button!")
+    // press button
+    generating = true
+    // set animation
+    const deltaDeg = 3
+    var degCount = 0
+    var generateButton = document.getElementById("generateButtonImg")
+    var intervalId = setInterval(function() {
+        degCount++;
+        generateButton.style.transform = 'rotate('+(deltaDeg*degCount).toString()+'deg)';
+    }, 20);
 
     var items = ""
     for (let i = 0; i < elementList.length; i++){
@@ -44,8 +56,16 @@ function generate(elementList){
             console.log(output.choices[0].message.content)
             var rawAnswers = output.choices[0].message.content.split('\n').join(', ').split(';').join(', ').split(', ')
             changeComponent(elementList, rawAnswers)
+            generating = false
+            clearInterval(intervalId);
+            generateButton.style.transform = 'rotate(0deg)';
         })
-        .catch(error => console.log(error));
+        .catch(error => {
+            console.log(error);
+            generating = false;
+            clearInterval(intervalId);
+            generateButton.style.transform = 'rotate(0deg)';
+        });
 }
 
 function changeComponent(elementList, rawAnswers){
@@ -110,10 +130,13 @@ function changeComponent(elementList, rawAnswers){
 }
 
 function generateButtonHandler(){
-    // var elementList = document.getElementsByClassName("item").concat(document.getElementsByClassName("generated-item"));
-    var elementList = [].concat([].slice.call(document.getElementsByClassName("item")),
-                      [].slice.call(document.getElementsByClassName("generated-item")))
-    generate(elementList)
+    if(!generating){
+        var elementList = [].concat([].slice.call(document.getElementsByClassName("item")),
+                          [].slice.call(document.getElementsByClassName("generated-item")))
+        generate(elementList)
+    }else{
+        console.log("Generating in process!")
+    }
 }
 
 const generateButton = document.getElementById("generate-button")

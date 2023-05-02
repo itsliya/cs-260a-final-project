@@ -18,8 +18,9 @@ body {
 .current-list {
   padding-left: 1rem;
   padding-right: 1rem;
-  height: 500px;
+  height: 550px;
   overflow-y: scroll;
+  z-index: 100;
 }
 
 .substitute-product {

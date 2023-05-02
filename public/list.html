@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/checkbox.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>  
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -19,7 +18,7 @@
 
      <body>
         <!-- side bar -->
-        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none; z-index:200" id="mySidebar">
             <button onclick="sidebar_close()" class="w3-bar-item w3-large" id="sidebar-name">Hello, John!</button>
             <img src="assets/img/sidebar.png" width="100%"alt="sidebar img">
         </div>
@@ -106,7 +105,7 @@
 
         <div class="row" id="footerInfo">
             <!-- Price and CO2 card -->
-            <div class="col list-savings-card">
+            <div class="col list-savings-card" style="top: 5rem;">
                 <div class="col-3">
                     <div class="co2-card" style="width: 15rem;">
                         <img width="30" src="assets/img/co2.png">
@@ -121,7 +120,7 @@
                 </div>    
                 <div class="col-3 generate-card">
                     <a class="generate-button" id="generate-button">
-                        <img src="assets/img/generateButton.png" width="55">
+                        <img id="generateButtonImg" src="assets/img/generateButton.png" width="55">
                     </a>
                     <p class="list-button-text">Generate</p>
                 </div>  
