@@ -1,62 +1,85 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>EcoList</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <style>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>EcoList</title>
+      <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/css/style.css" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <style>
       .list-row {
         display: flex;
         align-items: center;
-        height: 80px;
         margin-bottom: 20px;
         padding: 10px;
-        background-color: #f8f9fa;
         border-radius: 5px;
         transition: background-color 0.3s;
+        background-color: #f3f6f8;
       }
 
-      .list-row:hover {
-        background-color: #d4edda;
-      }
 
+  
+        .list-row:hover {
+          background-color: #d4edda;
+        }
+  
+        .list-image-placeholder {
+          flex-basis: 10%;
+          height: 100%;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+  
+        .list-content {
+          flex-grow: 1;
+          padding-left: 15px;
+        }
+  
+        .list-title {
+          margin: 0;
+          font-size: 18px;
+          font-weight: bold;
+        }
+  
+        .list-description {
+          margin: 0;
+          font-size: 14px;
+          color: #6c757d;
+        }
+  
+        .list-date {
+          margin-left: 15px;
+          font-size: 14px;
+          color: #6c757d;
+        }
+  
+        a {
+      color: inherit;
+      }
       .list-image-placeholder {
-        flex-basis: 10%;
-        height: 100%;
-        background-color: #dee2e6;
+        width: 50;
+        height: 70px;
         border-radius: 5px;
+        cursor: pointer;
       }
-
-      .list-content {
-        flex-grow: 1;
-        padding-left: 15px;
-      }
-
-      .list-title {
-        margin: 0;
-        font-size: 18px;
-      }
-
-      .list-description {
-      margin: 0;
-      font-size: 11px;
-      color: #6c757d;
-      max-height: 60px;
-      overflow-y: auto;
-}
-
-
-      .list-date {
-        margin-left: 15px;
-        font-size: 14px;
-        color: #6c757d;
-      }
-    </style>
+  
+        /* Different colors for image placeholders */
+        /* .list-row:nth-of-type(1) .list-image-placeholder {
+          background-color: #ff9999;
+        }
+  
+        .list-row:nth-of-type(2) .list-image-placeholder {
+          background-color: #99ccff;
+        }
+  
+        .list-row:nth-of-type(3) .list-image-placeholder {
+          background-color: #99ff99;
+        } */
+      </style>
+  
   </head>
 
   <body>
@@ -93,59 +116,70 @@
       </div>
       
       
+
       <div class="row">
         <div class="col-12">
           <div class="list-row">
-            <div class="list-image-placeholder"></div>
+            <div class="list-image-placeholder" style="background-color: #e7c6ff;"></div>
             <div class="list-content">
               <p class="list-title">New List</p>
               <p class="list-description">Grocery list for the week.</p>
             </div>
             <div class="list-date">01/15/2023</div>
           </div>
+
           <a href="WeeklyGroceries.html">
-            <div class="list-row">
-              <div class="list-image-placeholder"></div>
-              <div class="list-content">
-                <p class="list-title">Weekly Groceries</p>
-                <p class="list-description">Standard grocery list.</p>
+              <div class="list-row">
+                <div class="list-image-placeholder" style="background-color: #e9d8a6;"></div>
+                <div class="list-content">
+                  <p class="list-title">Weekly Groceries</p>
+                  <p class="list-description">Standard grocery list.</p>
+                </div>
+                <div class="list-date">01/01/2023</div>
               </div>
-              <div class="list-date">01/01/2023</div>
-            </div>
-          </a>
-          <a href="kidslist.html">
-            <div class="list-row">
-              <div class="list-image-placeholder"></div>
-              <div class="list-content">
-                <p class="list-title">Kid's Sports Snacks</p>
-                <p class="list-description">Healthy snacks for kids' sports.</p>
+            </a>
+            <a href="kidslist.html">
+              <div class="list-row">
+                <div class="list-image-placeholder" style="background-color: #ffc8dd;"></div>
+                <div class="list-content">
+                  <p class="list-title">Kid's Sports Snacks</p>
+                  <p class="list-description">Healthy snacks for kids' sports.</p>
+                </div>
+                <div class="list-date">01/15/2023</div>
               </div>
-              <div class="list-date">01/15/2023</div>
-            </div>
-          </a>
-          <a href="Grilling.html">
-            <div class="list-row">
-              <div class="list-image-placeholder"></div>
-              <div class="list-content">
-                <p class="list-title">Jack's Grilling</p>
-                <p class="list-description">Items needed for a barbecue with friends.</p>
+            </a>
+            <a href="Grilling.html" >
+              <div class="list-row">
+                <div class="list-image-placeholder" style="background-color: #bde0fe;"></div>
+                <div class="list-content">
+                  <p class="list-title">Jack's Grilling</p>
+                  <p class="list-description">Items needed for a barbecue.</p>
+                </div>
+                <div class="list-date">02/01/2023</div>
               </div>
-              <div class="list-date">02/01/2023</div>
+            </a>
+            <div class="list-row">
+              <div class="list-image-placeholder" style="background-color: #f28482;"></div>
+              <div class="list-content">
+                <p class="list-title">Old Shopping List</p>
+                <p class="list-description">Items already purchased.</p>
+              </div>
+              <div class="list-date">02/15/2023</div>
             </div>
-          </a>
-          <div class="list-row">
-            <div class="list-image-placeholder"></div>
-            <div class="list-content">
-              <p class="list-title">Old Shopping List</p>
-              <p class="list-description">Items already purchased.</p>
-            </div>
-            <div class="list-date">02/15/2023</div>
           </div>
         </div>
-      </div>
-      
-        
+        </div>
       </div>
     </div>
+    <script>
+      // Make image placeholder turn green when clicked
+      $(document).ready(function() {
+        $(".list-image-placeholder").click(function() {
+          $(this).css("background-color", "#28a745");
+        });
+      });
+    </script>
   </body>
 </html>
+
+

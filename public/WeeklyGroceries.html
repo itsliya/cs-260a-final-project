@@ -59,7 +59,7 @@
                 <div class="col-1 mt-6">
                     <div class="card featured-save border-0">
                         <div class="card-horizontal">
-                            <div class="img-square-wrapper">
+                            <div class="img-square-wrapper" onclick="window.location.href='index.html'">
                                 <img src="assets/img/arrow-circle.png" style="scale: 48%;" width="70px" height="62px" alt="Card image cap">
                                 <p>Home</p>
                             </div>
@@ -162,7 +162,8 @@
 
 
         <div class="row" id="footerInfo">
-            <div class="col list-savings-card">
+            <!-- Price and CO2 card -->
+            <div class="col list-savings-card" style="top: 5rem;">
                 <div class="col-3">
                     <div class="co2-card" style="width: 15rem;">
                         <img width="30" src="assets/img/co2.png">
@@ -177,59 +178,21 @@
                 </div>    
                 <div class="col-3 generate-card">
                     <a class="generate-button" id="generate-button">
-                        <img src="assets/img/green-earth.png" width="50">
+                        <img id="generateButtonImg" src="assets/img/generateButton.png" width="55">
                     </a>
                     <p class="list-button-text">Generate</p>
                 </div>  
             </div>
+
+            <!-- property controller -->
+            <div id="quantityCounter" style="display: none"></div>
         </div>
     
 
     <!-- Control scripts -->
     <script type="module" src="assets/js/generate.js"></script>
+
     <script>
-        
-    const generateButton = document.getElementById("find-products-button");
-    const featuredProductCard = document.getElementById("featured-product-card");
-    const eggsCard = document.getElementById("eggs-card");
-    generateButton.addEventListener("click",  function(e) {
-        featuredProductCard.style.display = "none";
-        eggsCard.style.display = "block";
-    });
-
-    function incrementValue(e) {
-        e.preventDefault();
-        var fieldName = $(e.target).data('field');
-        var parent = $(e.target).closest('div');
-        var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
-
-        if (!isNaN(currentVal)) {
-            parent.find('input[name=' + fieldName + ']').val(currentVal + 1);
-        } else {
-            parent.find('input[name=' + fieldName + ']').val(0);
-        }
-    }
-
-    function decrementValue(e) {
-        e.preventDefault();
-        var fieldName = $(e.target).data('field');
-        var parent = $(e.target).closest('div');
-        var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
-
-        if (!isNaN(currentVal) && currentVal > 0) {
-            parent.find('input[name=' + fieldName + ']').val(currentVal - 1);
-        } else {
-            parent.find('input[name=' + fieldName + ']').val(0);
-        }
-    }
-
-    $('.input-group').on('click', '.button-plus', function(e) {
-        incrementValue(e);
-    });
-
-    $('.input-group').on('click', '.button-minus', function(e) {
-        decrementValue(e);
-    });
 
     // Side Bar
     function sidebar_open() {
@@ -243,7 +206,7 @@
     // Create Raw List
     function addListItem() {
         var container = document.getElementById("listContainer")
-        var name = document.getElementById("itemNameInput").value.replace(" ", "_");
+        var name = document.getElementById("itemNameInput").value.trim().replace(" ", "_");
         if (document.getElementById("itemNameInput").value === ""){
             return
         }
@@ -280,6 +243,16 @@
         var name = element.id.split("-")[0].trim()
         console.log(name)
         var quantity = parseInt(document.getElementById(name+"-quantity").value)
+
+        var item = document.getElementById(name+"-item")
+        if(item.className === "generated-item") {
+            var totalQuant = parseInt(document.getElementById("quantityCounter").value)
+            totalQuant -= 1
+            document.getElementById("quantityCounter").value = totalQuant
+            document.getElementById("co2").textContent = `Total CO2: ${(totalQuant * 0.24).toFixed(2)} kg`
+            document.getElementById("price").textContent = `Total Price: \$${(totalQuant * 0.99).toFixed(2)}`
+        }
+
         if(quantity>1){
             document.getElementById(name+"-quantity").value = quantity-1
         }else{
@@ -293,11 +266,19 @@
         var name = element.id.split("-")[0].trim()
         var quantity = parseInt(document.getElementById(name+"-quantity").value)
         document.getElementById(name+"-quantity").value = quantity+1
+
+        var item = document.getElementById(name+"-item")
+        if(item.className === "generated-item") {
+            var totalQuant = parseInt(document.getElementById("quantityCounter").value)
+            totalQuant += 1
+            document.getElementById("quantityCounter").value = totalQuant
+            document.getElementById("co2").textContent = `Total CO2: ${(totalQuant * 0.24).toFixed(2)} kg`
+            document.getElementById("price").textContent = `Total Price: \$${(totalQuant * 0.99).toFixed(2)}`
+        }
     }
     </script>
     </body>
 </html>
-      
 <!-- References: 
 - https://codepen.io/anitaparmar26/pen/BaLYMeN 
 - https://codepen.io/SteveJRobertson/pen/POdvgz

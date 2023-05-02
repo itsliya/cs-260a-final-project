@@ -18,8 +18,9 @@ body {
 .current-list {
   padding-left: 1rem;
   padding-right: 1rem;
-  height: 500px;
+  height: 550px;
   overflow-y: scroll;
+  z-index: 100;
 }
 
 .substitute-product {
@@ -235,8 +236,8 @@ icon-shape {
 
 .co2-card, .receipt-card {
   border:rgb(75, 198, 75) 2px solid;
-  border-radius: 7%;
-  padding: 5%;
+  border-radius: 10px;
+  padding: 10%;
   margin-bottom: 8px;
   box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
 }
@@ -252,9 +253,10 @@ icon-shape {
   bottom: 5.5em !important;
   position: relative !important;
 }
+
 .generate-card img {
   margin-left: 0.5em !important;
-  filter: invert(55%) sepia(96%) saturate(320%) hue-rotate(71deg) brightness(208%) contrast(74%);
+  /* filter: invert(55%) sepia(96%) saturate(320%) hue-rotate(71deg) brightness(208%) contrast(74%); */
 }
 
 .featured-stores {
@@ -415,7 +417,7 @@ icon-shape {
 
 .product-card-img {
   margin: 10px;
-  background-color: #b0f6a6;
+  background-color: white;
   border: 3px solid rgb(248, 251, 243);
   border-radius: 10px;
 }
